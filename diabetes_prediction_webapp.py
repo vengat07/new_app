@@ -64,7 +64,7 @@ st.write(user_data.drop('age',axis=1)
 
 
 # MODEL
-rf  = RandomForestClassifier()
+rf = RandomForestClassifier()
 rf.fit(x_train, y_train)
 user_result = rf.predict(user_data)
 
