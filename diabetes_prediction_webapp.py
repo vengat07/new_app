@@ -1,36 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@vengat07 
-akmadan
-/
-diabetes_prediction
-Public
-Fork your own copy of akmadan/diabetes_prediction
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Security
-Insights
-diabetes_prediction/app.py /
-@akmadan
-akmadan Update app.py
-Latest commit 6c0f580 on Dec 29, 2020
- History
- 1 contributor
-178 lines (134 sloc)  4.85 KB
-
-#pip install streamlit
-#pip install pandas
-#pip install sklearn
 
 
 # IMPORT STATEMENTS
