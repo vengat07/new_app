@@ -1,3 +1,39 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@vengat07 
+akmadan
+/
+diabetes_prediction
+Public
+Fork your own copy of akmadan/diabetes_prediction
+Code
+Issues
+Pull requests
+1
+Actions
+Projects
+Security
+Insights
+diabetes_prediction/app.py /
+@akmadan
+akmadan Update app.py
+Latest commit 6c0f580 on Dec 29, 2020
+ History
+ 1 contributor
+178 lines (134 sloc)  4.85 KB
+
+#pip install streamlit
+#pip install pandas
+#pip install sklearn
+
+
+# IMPORT STATEMENTS
 import streamlit as st
 import pandas as pd
 from PIL import Image
@@ -11,7 +47,7 @@ import seaborn as sns
 
 
 
-df = pd.read_csv("diabetes.csv")
+df = pd.read_csv(![](diabetes.csv))
 
 # HEADINGS
 st.title('Diabetes Checkup')
@@ -28,17 +64,16 @@ x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random
 
 # FUNCTION
 def user_report():
-    
-    pregnancies = st.sidebar.slider('Pregnancies', 0,17, 3 )
-    glucose = st.sidebar.slider('Glucose', 0,200, 120 )
-    bp = st.sidebar.slider('Blood Pressure', 0,122, 70 )
-    skinthickness = st.sidebar.slider('Skin Thickness', 0,100, 20 )
-    insulin = st.sidebar.slider('Insulin', 0,846, 79 )
-    bmi = st.sidebar.slider('BMI', 0,67, 20 )
-    dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0,2.4, 0.47 )
-    age = st.sidebar.slider('Age', 21,88, 33 )
+  pregnancies = st.sidebar.slider('Pregnancies', 0,17, 3 )
+  glucose = st.sidebar.slider('Glucose', 0,200, 120 )
+  bp = st.sidebar.slider('Blood Pressure', 0,122, 70 )
+  skinthickness = st.sidebar.slider('Skin Thickness', 0,100, 20 )
+  insulin = st.sidebar.slider('Insulin', 0,846, 79 )
+  bmi = st.sidebar.slider('BMI', 0,67, 20 )
+  dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0,2.4, 0.47 )
+  age = st.sidebar.slider('Age', 21,88, 33 )
 
-    user_report_data = {
+  user_report_data = {
       'pregnancies':pregnancies,
       'glucose':glucose,
       'bp':bp,
@@ -48,8 +83,8 @@ def user_report():
       'dpf':dpf,
       'age':age
   }
-    report_data = pd.DataFrame(user_report_data, index=[0])
-    return report_data
+  report_data = pd.DataFrame(user_report_data, index=[0])
+  return report_data
 
 
 
@@ -58,13 +93,12 @@ def user_report():
 user_data = user_report()
 st.subheader('Patient Data')
 st.write(user_data)
-st.write(user_data.drop('age',axis=1)
 
 
 
 
 # MODEL
-rf = RandomForestClassifier()
+rf  = RandomForestClassifier()
 rf.fit(x_train, y_train)
 user_result = rf.predict(user_data)
 
@@ -77,10 +111,9 @@ st.title('Visualised Patient Report')
 
 # COLOR FUNCTION
 if user_result[0]==0:
-    
-    color = 'blue'
+  color = 'blue'
 else:
-    color = 'red'
+  color = 'red'
 
 
 # Age vs Pregnancies
@@ -167,10 +200,10 @@ st.pyplot(fig_dpf)
 st.subheader('Your Report: ')
 output=''
 if user_result[0]==0:
-    
-    output = 'You are not Diabetic'
+  output = 'You are not Diabetic'
 else:
-    output = 'You are Diabetic'
+  output = 'You are Diabetic'
 st.title(output)
 st.subheader('Accuracy: ')
 st.write(str(accuracy_score(y_test, rf.predict(x_test))*100)+'%')
+
