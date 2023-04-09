@@ -64,7 +64,7 @@ def user_report(df):
     }
     
     user_data = pd.DataFrame(user_report_data, index=[0])
-    data_names = data_names.append(user_data, ignore_index=True)
+    #data_names = data_names.append(user_data, ignore_index=True)
     
     return new_df
 
