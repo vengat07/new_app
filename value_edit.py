@@ -37,6 +37,7 @@ import pandas as pd
 
 def user_report():
     name = st.sidebar.text_input('Name')
+    pregnancies = st.sidebar.slider('Pregnancies', 0,17, )
     glucose = st.sidebar.slider('Glucose', 0,200, )
     bp = st.sidebar.slider('Blood Pressure', 0,122, )
     skinthickness = st.sidebar.slider('Skin Thickness', 0,100,)
