@@ -44,7 +44,7 @@ def user_report(df):
      skinthickness = st.sidebar.text_input('Skin Thickness', 0, 100)
      insulin = st.sidebar.text_input('Insulin', 0, 300)
      bmi = st.sidebar.text_input('BMI', 0, 67)
-     dpf = st.sidebar.text_input('Diabetes Pedigree Function', 0.0, 2.4)
+     dpf = st.sidebar.text_input('Diabetes Pedigree Function', 0.0, 2)
      age = st.sidebar.text_input('Age', 0, 100)
 
      submit_button = st.sidebar.button('Submit')
