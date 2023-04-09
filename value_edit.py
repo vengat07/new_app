@@ -63,14 +63,14 @@ def user_report(df):
         'age': age
     }
     
-    new_df = df.append(user_report_data, ignore_index=True)
+    data_names = df.append(user_report_data, ignore_index=True)
     
     return new_df
 
 
 
 # PATIENT DATA
-user_data_with_name = user_report()
+user_data_with_name = user_report(data_names)
 #user_data_with_name = user_report()
 #user_data_with_name.insert(0,"name",name,True)
 st.subheader('Patient Data')
