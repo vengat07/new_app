@@ -30,6 +30,7 @@ x = df.drop(['Outcome'], axis = 1)
 y = df.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random_state = 0)
  
+new_df = pd.read_csv('new_df.csv')
 
 # FUNCTION
 import streamlit as st
