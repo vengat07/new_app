@@ -48,7 +48,7 @@ def user_report():
     insulin = st.sidebar.slider('Insulin', 0, 846, )
     bmi = st.sidebar.slider('BMI', 0, 67, )
     dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0, 2.4, )
-    age = st.sidebar.slider('Age', 21, 88, )
+    age = st.sidebar.slider('Age', 0, 100, )
     
     user_report_data = {
         'name': name,
