@@ -18,7 +18,7 @@ df= pd.read_csv('diabetes_1.csv')
 
 # HEADINGS
 st.title('Diabetes Checkup')
-st.header('Patient Data')
+st.sidebar.header('Patient Data')
 #name = st.sidebar.text_input('Enter the name')
 st.write(df.head())
 st.subheader('Training Data Stats')
@@ -72,7 +72,7 @@ def user_report(df):
 user_data_with_name = user_report(data_names)
 #user_data_with_name = user_report()
 #user_data_with_name.insert(0,"name",name,True)
-st.sidebar.subheader('Patient Data')
+st.subheader('Patient Data')
 st.write(user_data_with_name)
 
 user_data = user_data_with_name.drop('Name',axis=1)
