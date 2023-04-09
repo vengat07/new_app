@@ -69,7 +69,7 @@ def user_report():
 
 
 # PATIENT DATA
-user_data_with_name = user_report()
+user_data_with_name = user_report(df)
 #user_data_with_name = user_report()
 #user_data_with_name.insert(0,"name",name,True)
 st.subheader('Patient Data')
