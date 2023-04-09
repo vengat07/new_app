@@ -178,5 +178,6 @@ if user_result[0]==0:
   output = 'You are not Diabetic'
 else:
   output = 'You are Diabetic'
+st.title(output)
 
 
