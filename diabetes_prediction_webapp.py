@@ -57,10 +57,13 @@ def user_report():
 
 
 # PATIENT DATA
-user_data = user_report()
+user_data_with_name = user_report()
+#user_data_with_name = user_report()
+user_data_with_name.insert(0,"name",name,True)
+#df.insert(2, "Age", [21, 23, 24, 21], True)
 st.subheader('Patient Data')
-st.write(user_data)
-
+st.write(user_data_with_name)
+user_data_witout_name = user_data_with_name.drop('name',axis=1)
 
 
 
