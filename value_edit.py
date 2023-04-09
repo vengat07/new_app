@@ -14,7 +14,7 @@ page_title = "Daibetes_Prediction and checkup"
 
 st.set_page_config(page_title = page_title)
 
-df = pd.read_csv('diabetes_1.csv')
+data_names = pd.read_csv('data_names.csv')
 
 # HEADINGS
 st.title('Diabetes Checkup')
@@ -64,7 +64,7 @@ def user_report(df):
     }
     
     user_data = pd.DataFrame(user_report_data, index=[0])
-    new_df = new_df.append(user_data, ignore_index=True)
+    data_names = data_names.append(user_data, ignore_index=True)
     
     return new_df
 
