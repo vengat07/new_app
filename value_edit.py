@@ -32,29 +32,35 @@ x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random
 
 
 # FUNCTION
-def user_report():
-   #name = st.sidebar.text_input('Enter the name')
-   pregnancies = st.sidebar.slider('Pregnancies', 0,17, 3 )
-   glucose = st.sidebar.slider('Glucose', 0,200, 120 )
-   bp = st.sidebar.slider('Blood Pressure', 0,122, 70 )
-   skinthickness = 110
-   insulin = st.sidebar.slider('Insulin', 0,846, 79 )
-   bmi = st.sidebar.slider('BMI', 0,67, 20 )
-   dpf = 1.4
-   age = st.sidebar.slider('Age', 21,88, 33 )
+import streamlit as st
+import pandas as pd
 
-   user_report_data = {
-      'pregnancies':pregnancies,
-      'glucose':glucose,
-      'bp':bp,
-      'skinthickness':skinthickness,
-      'insulin':insulin,
-      'bmi':bmi,
-      'dpf':dpf,
-      'age':age
-  }
-   report_data = pd.DataFrame(user_report_data, index=[0])
-   return report_data
+def user_report():
+    submitted = st.sidebar.button('Submit')
+    if not submitted:
+        return None
+    
+    pregnancies = st.sidebar.slider('Pregnancies', 0, 17, 3)
+    glucose = st.sidebar.slider('Glucose', 0, 200, 120)
+    bp = st.sidebar.slider('Blood Pressure', 0, 122, 70)
+    skinthickness = st.sidebar.slider('Skin Thickness', 0, 100, 20)
+    insulin = st.sidebar.slider('Insulin', 0, 846, 79)
+    bmi = st.sidebar.slider('BMI', 0, 67, 20)
+    dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0, 2.4, 0.47)
+    age = st.sidebar.slider('Age', 21, 88, 33)
+    
+    user_report_data = {
+        'pregnancies': pregnancies,
+        'glucose': glucose,
+        'bp': bp,
+        'skinthickness': skinthickness,
+        'insulin': insulin,
+        'bmi': bmi,
+        'dpf': dpf,
+        'age': age
+    }
+    report_data = pd.DataFrame(user_report_data, index=[0])
+    return report_data
 
 
 
