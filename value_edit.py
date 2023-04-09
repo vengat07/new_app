@@ -38,34 +38,33 @@ import pandas as pd
 
 def user_report(df):
     name = st.sidebar.text_input('Name')
-    pregnancies = st.sidebar.slider('Pregnancies', 0,17, )
-    glucose = st.sidebar.slider('Glucose', 0,200, )
-    bp = st.sidebar.slider('Blood Pressure', 0,122, )
-    skinthickness = st.sidebar.slider('Skin Thickness', 0,100,)
-    insulin = st.sidebar.slider('Insulin', 0,300,)
-    bmi = st.sidebar.slider('BMI', 0,67, )
-    dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0,2.4,  )
-    age = st.sidebar.slider('Age', 0,100, )
+    pregnancies = st.sidebar.slider('Pregnancies', 0, 17)
+    glucose = st.sidebar.slider('Glucose', 0, 200)
+    bp = st.sidebar.slider('Blood Pressure', 0, 122)
+    skinthickness = st.sidebar.slider('Skin Thickness', 0, 100)
+    insulin = st.sidebar.slider('Insulin', 0, 300)
+    bmi = st.sidebar.slider('BMI', 0, 67)
+    dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0, 2.4)
+    age = st.sidebar.slider('Age', 0, 100)
 
     submit_button = st.sidebar.button('Submit')
-    if not submit_button:
-        return df
-    
+
     user_report_data = {
-        'Name': name,
-        'Pregnancies': pregnancies,
-        'Glucose': glucose,
-        'BloodPressure': bp,
-        'SkinThickness': skinthickness,
-        'Insulin': insulin,
-        'BMI': bmi,
-        'DiabetesPedigreeFunction': dpf,
-        'Age': age
+        'name': name,
+        'pregnancies': pregnancies,
+        'glucose': glucose,
+        'bp': bp,
+        'skinthickness': skinthickness,
+        'insulin': insulin,
+        'bmi': bmi,
+        'dpf': dpf,
+        'age': age
     }
+
+    if submit_button:
+        df = df.append(user_report_data, ignore_index=True)
     
-    data_names = df.append(user_report_data, ignore_index=True)
-    
-    return data_names
+    return df
 
 
 
