@@ -37,10 +37,10 @@ def user_report():
    pregnancies = st.sidebar.slider('Pregnancies', 0,17, 3 )
    glucose = st.sidebar.slider('Glucose', 0,200, 120 )
    bp = st.sidebar.slider('Blood Pressure', 0,122, 70 )
-   skinthickness = st.sidebar.slider('Skin Thickness', 0,100, 20 )
+   skinthickness = 110
    insulin = st.sidebar.slider('Insulin', 0,846, 79 )
    bmi = st.sidebar.slider('BMI', 0,67, 20 )
-   dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0,2.4, 0.47 )
+   dpf = 1.4
    age = st.sidebar.slider('Age', 21,88, 33 )
 
    user_report_data = {
