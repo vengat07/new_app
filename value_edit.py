@@ -38,14 +38,14 @@ import pandas as pd
 
 def user_report(df):
     name = st.sidebar.text_input('Name')
-    pregnancies = st.sidebar.text_input('Pregnancies',,'only_numbers')
-    glucose = st.sidebar.text_input('Glucose',,'only_numbers')
-    bp = st.sidebar.text_input('Blood Pressure',,'only_numbers')
-    skinthickness = st.sidebar.text_input('Skin Thickness',,'only_numbers')
-    insulin = st.sidebar.text_input('Insulin',,'only_numbers')
-    bmi = st.sidebar.text_input('BMI',,'only_numbers')
-    dpf = st.sidebar.text_input('Diabetes Pedigree Function',,'only_numbers')
-    age = st.sidebar.text_input('Age',,'only_numbers')
+    pregnancies = st.sidebar.text_input('Pregnancies')
+    glucose = st.sidebar.text_input('Glucose')
+    bp = st.sidebar.text_input('Blood Pressure')
+    skinthickness = st.sidebar.text_input('Skin Thickness')
+    insulin = st.sidebar.text_input('Insulin')
+    bmi = st.sidebar.text_input('BMI')
+    dpf = st.sidebar.text_input('Diabetes Pedigree Function')
+    age = st.sidebar.text_input('Age')
 
     submit_button = st.sidebar.button('Submit')
 
