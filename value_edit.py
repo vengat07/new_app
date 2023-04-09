@@ -47,9 +47,9 @@ def user_report(df):
      dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0, 2.4)
      age = st.sidebar.slider('Age', 0, 100)
 
-    submit_button = st.sidebar.button('Submit')
+     submit_button = st.sidebar.button('Submit')
 
-    user_report_data = {
+     user_report_data = {
         'name': name,
         'pregnancies': pregnancies,
         'glucose': glucose,
@@ -61,10 +61,10 @@ def user_report(df):
         'age': age
     }
 
-    if submit_button:
+     if submit_button:
         df = df.append(user_report_data, ignore_index=True)
     
-    return df
+     return df
 
 
 
