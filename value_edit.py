@@ -84,14 +84,14 @@ user_result = rf.predict(user_data)
 
 
 # Age vs Dpf
-st.header('DPF Value Graph (Others vs Yours)')
-fig_dpf = plt.figure()
-ax13 = sns.scatterplot(x = 'Age', y = 'DiabetesPedigreeFunction', data = df, hue = 'Outcome', palette='YlOrBr')
-ax14 = sns.scatterplot(x = user_data['age'], y = user_data['dpf'], s = 150, color = color)
-plt.xticks(np.arange(10,100,5))
-plt.yticks(np.arange(0,3,0.2))
-plt.title('0 - Healthy & 1 - Unhealthy')
-st.pyplot(fig_dpf)
+#st.header('DPF Value Graph (Others vs Yours)')
+#fig_dpf = plt.figure()
+#ax13 = sns.scatterplot(x = 'Age', y = 'DiabetesPedigreeFunction', data = df, hue = 'Outcome', palette='YlOrBr')
+#ax14 = sns.scatterplot(x = user_data['age'], y = user_data['dpf'], s = 150, color = color)
+#plt.xticks(np.arange(10,100,5))
+#plt.yticks(np.arange(0,3,0.2))
+#plt.title('0 - Healthy & 1 - Unhealthy')
+#st.pyplot(fig_dpf)
 
 #ploting
 final=pd.Series(rfc.feature_importances_, index=X.columns).plot(kind='barh')
