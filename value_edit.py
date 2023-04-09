@@ -36,10 +36,6 @@ import streamlit as st
 import pandas as pd
 
 def user_report():
-    submitted = st.sidebar.button('Submit')
-    if not submitted:
-        return None
-    
     name = st.sidebar.text_input('Name')
     pregnancies = st.sidebar.text_input('Pregnancies')
     glucose = st.sidebar.text_input('Glucose' )
@@ -49,6 +45,10 @@ def user_report():
     bmi = st.sidebar.text_input('BMI', 0, 67, )
     dpf = st.sidebar.text_input('Diabetes Pedigree Function' )
     age = st.sidebar.text_input('Age' )
+    
+    submit_button = st.sidebar.button('Submit')
+    if not submit_button:
+        return None
     
     user_report_data = {
         'name': name,
@@ -63,6 +63,7 @@ def user_report():
     }
     report_data = pd.DataFrame(user_report_data, index=[0])
     return report_data
+
 
 # PATIENT DATA
 user_data_with_name = user_report()
