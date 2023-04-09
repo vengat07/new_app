@@ -18,7 +18,7 @@ df= pd.read_csv('diabetes_1.csv')
 
 # HEADINGS
 st.title('Diabetes Checkup')
-st.sidebar.header('Patient Data')
+st.header('Patient Data')
 #name = st.sidebar.text_input('Enter the name')
 st.write(df.head())
 st.subheader('Training Data Stats')
@@ -47,7 +47,7 @@ def user_report(df):
     dpf = st.slider('Diabetes Pedigree Function', 0.0,2.4,  )
     age = st.slider('Age', 0,100, )
 
-    submit_button = st.sidebar.button('Submit')
+    submit_button = st.button('Submit')
     if not submit_button:
         return df
     
