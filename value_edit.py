@@ -30,13 +30,13 @@ x = data_set.drop(['Outcome'], axis = 1)
 y = data_set.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random_state = 0)
  
-#df= pd.read_csv('data_names.csv')
+df= pd.read_csv('data_names.csv')
 
 # FUNCTION
 import streamlit as st
 import pandas as pd
 
-def user_report(df):
+def user_report():
     name = st.sidebar.text_input('Name')
     pregnancies = st.sidebar.slider('Pregnancies', 0, 17)
     glucose = st.sidebar.slider('Glucose', 0, 200)
