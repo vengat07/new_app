@@ -14,7 +14,7 @@ page_title = "Daibetes_Prediction and checkup"
 
 st.set_page_config(page_title = page_title)
 
-df= pd.read_csv('daidetes_1.csv')
+df= pd.read_csv('diabetes_1.csv')
 
 # HEADINGS
 st.title('Diabetes Checkup')
