@@ -19,7 +19,7 @@ df = pd.read_csv('diabetes_1.csv')
 # HEADINGS
 st.title('Diabetes Checkup')
 st.sidebar.header('Patient Data')
-name = st.sidebar.text_input('Enter the name')
+#name = st.sidebar.text_input('Enter the name')
 st.write(df.head())
 st.subheader('Training Data Stats')
 st.write(df.describe())
@@ -40,6 +40,7 @@ def user_report():
     if not submitted:
         return None
     
+    name = st.sidebar.text_input('Name')
     pregnancies = st.sidebar.slider('Pregnancies', 0, 17, 3)
     glucose = st.sidebar.slider('Glucose', 0, 200, 120)
     bp = st.sidebar.slider('Blood Pressure', 0, 122, 70)
@@ -50,6 +51,7 @@ def user_report():
     age = st.sidebar.slider('Age', 21, 88, 33)
     
     user_report_data = {
+        'name': name,
         'pregnancies': pregnancies,
         'glucose': glucose,
         'bp': bp,
@@ -61,9 +63,6 @@ def user_report():
     }
     report_data = pd.DataFrame(user_report_data, index=[0])
     return report_data
-
-
-
 
 # PATIENT DATA
 user_data_with_name = user_report()
