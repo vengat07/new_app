@@ -20,9 +20,9 @@ data_set= pd.read_csv('diabetes_1.csv')
 st.title('Diabetes Checkup')
 st.sidebar.header('Patient Data')
 #name = st.sidebar.text_input('Enter the name')
-st.write(df.head())
+st.write(data_set.head())
 st.subheader('Training Data Stats')
-st.write(df.describe())
+st.write(data_set.describe())
 
 
 # X AND Y DATA
