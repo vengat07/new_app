@@ -36,7 +36,7 @@ df= pd.read_csv('data_names.csv')
 import streamlit as st
 import pandas as pd
 
-def user_report():
+def user_report(df):
     name = st.sidebar.text_input('Name')
     pregnancies = st.sidebar.slider('Pregnancies', 0, 17)
     glucose = st.sidebar.slider('Glucose', 0, 200)
