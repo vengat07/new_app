@@ -38,16 +38,16 @@ import pandas as pd
 
 def user_report(df):
     name = st.text_input('Name')
-    pregnancies = st.slider('Pregnancies', 0,17, )
-    glucose = st.slider('Glucose', 0,200, )
-    bp = st.slider('Blood Pressure', 0,122, )
-    skinthickness = st.slider('Skin Thickness', 0,100,)
-    insulin = st.slider('Insulin', 0,300,)
-    bmi = st.slider('BMI', 0,67, )
-    dpf = st.slider('Diabetes Pedigree Function', 0.0,2.4,  )
-    age = st.slider('Age', 0,100, )
+    pregnancies = st.sidebar.slider('Pregnancies', 0,17, )
+    glucose = st.sidebar.slider('Glucose', 0,200, )
+    bp = st.sidebar.slider('Blood Pressure', 0,122, )
+    skinthickness = st.sidebar.slider('Skin Thickness', 0,100,)
+    insulin = st.sidebar.slider('Insulin', 0,300,)
+    bmi = st.sidebar.slider('BMI', 0,67, )
+    dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0,2.4,  )
+    age = st.sidebar.slider('Age', 0,100, )
 
-    submit_button = st.button('Submit')
+    submit_button = st.sidebar.button('Submit')
     if not submit_button:
         return df
     
@@ -73,7 +73,7 @@ def user_report(df):
 user_data_with_name = user_report(data_names)
 #user_data_with_name = user_report()
 #user_data_with_name.insert(0,"name",name,True)
-st.subheader('Patient Data')
+st.sidebar.subheader('Patient Data')
 st.write(user_data_with_name)
 
 user_data = user_data_with_name.drop('Name',axis=1)
