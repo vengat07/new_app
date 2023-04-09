@@ -37,7 +37,7 @@ import streamlit as st
 import pandas as pd
 
 def user_report(df):
-    name = st.text_input('Name')
+    name = st.sidebar.text_input('Name')
     pregnancies = st.sidebar.slider('Pregnancies', 0,17, )
     glucose = st.sidebar.slider('Glucose', 0,200, )
     bp = st.sidebar.slider('Blood Pressure', 0,122, )
