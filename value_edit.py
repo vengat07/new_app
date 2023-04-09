@@ -76,7 +76,7 @@ st.write(user_data_with_name)
 
 user_data = user_data_with_name.drop('name',axis=1)
 
-
+st.write(user_data)
 
 # MODEL
 rf  = RandomForestClassifier()
