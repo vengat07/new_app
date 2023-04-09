@@ -14,7 +14,7 @@ page_title = "Daibetes_Prediction and checkup"
 
 st.set_page_config(page_title = page_title)
 
-data_names = pd.read_csv('data_names.csv')
+df= pd.read_csv('daidetes_1.csv')
 
 # HEADINGS
 st.title('Diabetes Checkup')
@@ -30,7 +30,7 @@ x = df.drop(['Outcome'], axis = 1)
 y = df.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random_state = 0)
  
-new_df = pd.read_csv('new_df.csv')
+data_names = pd.read_csv('data_names.csv')
 
 # FUNCTION
 import streamlit as st
