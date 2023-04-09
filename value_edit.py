@@ -75,7 +75,7 @@ user_data_with_name = user_report(df)
 st.subheader('Patient Data')
 st.write(user_data_with_name)
 
-user_data = user_data_with_name.drop('Name',axis=1)
+user_data = user_data_with_name.drop('name',axis=1)
 
 
 
