@@ -83,7 +83,7 @@ rf.fit(x_train, y_train)
 user_result = rf.predict(user_data)
 
 #ploting
-final=pd.Series(rfc.feature_importances_, index=X.columns).plot(kind='barh'))
+final=pd.Series(rfc.feature_importances_, index=X.columns).plot(kind='barh')
 st.pyplot(final)
 
 # OUTPUT
