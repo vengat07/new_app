@@ -63,10 +63,10 @@ def user_report(df):
         'age': age
     }
     
-    user_data = pd.DataFrame(user_report_data, index=[0])
-    #data_names = data_names.append(user_data, ignore_index=True)
+    new_df = df.append(user_report_data, ignore_index=True)
     
     return new_df
+
 
 
 # PATIENT DATA
