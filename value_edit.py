@@ -37,15 +37,15 @@ import streamlit as st
 import pandas as pd
 
 def user_report(df):
-    name = st.sidebar.text_input('Name')
-    pregnancies = st.sidebar.text_input('Pregnancies')
-    glucose = st.sidebar.text_input('Glucose')
-    bp = st.sidebar.text_input('Blood Pressure')
-    skinthickness = st.sidebar.text_input('Skin Thickness')
-    insulin = st.sidebar.text_input('Insulin')
-    bmi = st.sidebar.text_input('BMI')
-    dpf = st.sidebar.text_input('Diabetes Pedigree Function')
-    age = st.sidebar.text_input('Age')
+     name = st.sidebar.text_input('Name')
+    pregnancies = st.sidebar.slider('Pregnancies', 0, 17)
+    glucose = st.sidebar.slider('Glucose', 0, 200)
+    bp = st.sidebar.slider('Blood Pressure', 0, 122)
+    skinthickness = st.sidebar.slider('Skin Thickness', 0, 100)
+    insulin = st.sidebar.slider('Insulin', 0, 300)
+    bmi = st.sidebar.slider('BMI', 0, 67)
+    dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0, 2.4)
+    age = st.sidebar.slider('Age', 0, 100)
 
     submit_button = st.sidebar.button('Submit')
 
