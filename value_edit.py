@@ -52,15 +52,15 @@ def user_report(df):
         return df
     
     user_report_data = {
-        'name': name,
-        'pregnancies': pregnancies,
-        'glucose': glucose,
-        'bp': bp,
-        'skinthickness': skinthickness,
-        'insulin': insulin,
-        'bmi': bmi,
-        'dpf': dpf,
-        'age': age
+        'Name': name,
+        'Pregnancies': pregnancies,
+        'Glucose': glucose,
+        'BloodPressure': bp,
+        'SkinThickness': skinthickness,
+        'Insulin': insulin,
+        'BMI': bmi,
+        'DiabetesPedigreeFunction': dpf,
+        'Age': age
     }
     
     data_names = df.append(user_report_data, ignore_index=True)
