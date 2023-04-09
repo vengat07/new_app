@@ -65,9 +65,9 @@ def user_report():
 user_data_with_name = user_report()
 #user_data_with_name = user_report()
 user_data_with_name.insert(0,"name",name,True)
-
 st.subheader('Patient Data')
 st.write(user_data_with_name)
+
 user_data_witout_name = user_data_with_name.drop('name',axis=1)
 
 
@@ -75,7 +75,7 @@ user_data_witout_name = user_data_with_name.drop('name',axis=1)
 # MODEL
 rf  = RandomForestClassifier()
 rf.fit(x_train, y_train)
-user_result = rf.predict(user_data)
+user_result = rf.predict(user_data_witout_name)
 
 
 
