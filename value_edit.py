@@ -57,12 +57,16 @@ def user_report():
          'age':age
       }
       report_data = pd.DataFrame(user_report_data, index=[0])
-      return report_data
+      if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
+         output = 'You are Type I Diabetes'
+      else:
+         output = 'You are Type II Diabetes'
+      return report_data,output
    else:
-      return None
+      return None, None
 
 # PATIENT DATA
-user_data_with_name = user_report()
+user_data_with_name, output = user_report()
 st.subheader('Patient Data')
 st.write(user_data_with_name)
 
@@ -83,20 +87,21 @@ else:
   output = 'You are Diabetic'
 st.title(output)
 
-pregnancies = int(pregnancies)
-glucose = int(glucose)
-bp = int(bp)
-insulin = int(insulin)
-bmi = int(bmi)
-age = int(age)
-
-st.write(glucose)
-st.subheader('Type Result')
-output=''
-if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
-  output = 'You are Type I Diabetes'
-else:
-  output = 'You are Type II Diabetes'
 st.title(output)
+#pregnancies = int(pregnancies)
+#glucose = int(glucose)
+#bp = int(bp)
+#insulin = int(insulin)
+#bmi = int(bmi)
+#age = int(age)
+
+#st.write(glucose)
+#st.subheader('Type Result')
+#output=''
+#if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
+ # output = 'You are Type I Diabetes'
+#else:
+# output = 'You are Type II Diabetes'
+#st.title(output)
 
 #if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
