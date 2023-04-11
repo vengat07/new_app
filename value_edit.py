@@ -34,7 +34,7 @@ x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random
 # FUNCTION
 
 def user_report():
-   name = st.sidebar.text_input('Enter the name')
+   name = st.sidebar.text_input('Enter the name','jerry')
    pregnancies = int(st.sidebar.slider('Pregnancies', 0,17,))
    glucose = int(st.sidebar.slider('Glucose', 0,200,))
    bp = int(st.sidebar.slider('Blood Pressure', 0,122, ))
