@@ -87,7 +87,7 @@ else:
   output = 'You are Diabetic'
 st.title(output)
 
-st.title(output)
+st.title(output.glucose)
 #pregnancies = int(pregnancies)
 #glucose = int(glucose)
 #bp = int(bp)
