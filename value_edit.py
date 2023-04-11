@@ -30,7 +30,7 @@ x = data_set.drop(['Outcome'], axis = 1)
 y = data_set.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random_state = 0)
  
-df= pd.read_csv('data_names.csv')
+#df= pd.read_csv('data_names.csv')
 
 # FUNCTION
 import streamlit as st
@@ -71,7 +71,7 @@ def user_report():
 
 
 # PATIENT DATA
-user_data_with_name = user_report(df)
+user_data_with_name = user_report()
 #user_data_with_name = user_report()
 #user_data_with_name.insert(0,"name",name,True)
 st.subheader('Patient Data')
