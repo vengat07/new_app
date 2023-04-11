@@ -29,12 +29,12 @@ x = df.drop(['Outcome'], axis = 1)
 y = df.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random_state = 0)
  
-#df= pd.read_csv('data_names.csv')
+
 
 # FUNCTION
 
 def user_report():
-   name = st.sidebar.text_input('Enter the name','jerry')
+   name = st.sidebar.text_input('Enter the name')
    pregnancies = int(st.sidebar.slider('Pregnancies', 0,17,))
    glucose = int(st.sidebar.slider('Glucose', 0,200,))
    bp = int(st.sidebar.slider('Blood Pressure', 0,122, ))
@@ -57,11 +57,12 @@ def user_report():
          'age':age
       }
       report_data = pd.DataFrame(user_report_data, index=[0])
+      
       if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
          outresult = 'You are Type I Diabetes'
         
         
-      else user_result==1:
+      else:
          outresult = 'You are Type II Diabetes'
       return report_data,outresult
    else:
