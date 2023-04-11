@@ -14,7 +14,7 @@ page_title = "Sugar Spot"
 
 st.set_page_config(page_title = page_title)
 
-data_set= pd.read_csv('diabetes_1.csv')
+df= pd.read_csv('diabetes_1.csv')
 
 # HEADINGS
 st.title('Diabetes Checkup')
