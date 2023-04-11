@@ -100,5 +100,5 @@ output=''
 if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
   output = 'You are Type I Diabetes'
 else:
-  output = 'You are Type II Diabetic'
+  output = 'You are Type II Diabetes'
 st.title(output)
