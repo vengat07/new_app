@@ -53,7 +53,10 @@ def user_report():
          'pregnancies':pregnancies,
          'glucose':glucose,
          'bp':bp,
+         'skinthickness':skinthickness,
+         'insulin':insulin,
          'bmi':bmi,
+         'dpf':dpf,
          'age':age
       }
       report_data = pd.DataFrame(user_report_data, index=[0])
