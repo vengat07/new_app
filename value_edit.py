@@ -66,7 +66,7 @@ def user_report():
          outresult = 'You are Type II Diabetes'
       return report_data,outresult
    else:
-      return None
+      return None,None
 
 #st.write(user_report().name)
 # PATIENT DATA
