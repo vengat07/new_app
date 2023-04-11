@@ -83,8 +83,14 @@ else:
   output = 'You are Diabetic'
 st.title(output)
 
-st.write(glucose)
+pregnancies = int(pregnancies)
+glucose = int(glucose)
+bp = int(bp)
+insulin = int(insulin)
+bmi = int(bmi)
+age = int(age)
 
+st.write(glucose)
 st.subheader('Type Result')
 output=''
 if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
