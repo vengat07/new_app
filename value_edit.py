@@ -44,7 +44,7 @@ def user_report():
    dpf = 0.47
    age = int(st.sidebar.slider('Age', 0,100,))
 
-   if st.sidebar.button('Submit'):
+   if st.sidebar.button('Predict'):
       user_report_data = {
          'name':name,
          'pregnancies':pregnancies,
