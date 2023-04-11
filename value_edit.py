@@ -42,7 +42,7 @@ def user_report():
    insulin = int(st.sidebar.slider('Insulin', 0,150,  ))
    bmi = int(st.sidebar.slider('BMI', 0,67,))
    dpf = 0.47
-   age = int(st.sidebar.slider('Age', 21,88,))
+   age = int(st.sidebar.slider('Age', 0,100,))
 
    if st.sidebar.button('Submit'):
       user_report_data = {
