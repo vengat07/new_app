@@ -36,34 +36,37 @@ df= pd.read_csv('data_names.csv')
 import streamlit as st
 import pandas as pd
 
-def user_report(df):
-     name = st.sidebar.text_input('Name')
-     pregnancies = st.sidebar.slider('Pregnancies', 0, 17)
-     glucose = st.sidebar.slider('Glucose', 0, 200)
-     bp = st.sidebar.slider('Blood Pressure', 0, 122)
-     skinthickness = st.sidebar.slider('Skin Thickness', 0, 100)
-     insulin = st.sidebar.slider('Insulin', 0, 300)
-     bmi = st.sidebar.slider('BMI', 0, 67)
-     dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0, 2.4)
-     age = st.sidebar.slider('Age', 0, 100)
-     submit_button = st.sidebar.button('Submit')
+import streamlit as st
+import pandas as pd
 
-     user_report_data = {
-        'name': name,
-        'pregnancies': pregnancies,
-        'glucose': glucose,
-        'bp': bp,
-        'skinthickness': skinthickness,
-        'insulin': insulin,
-        'bmi': bmi,
-        'dpf': dpf,
-        'age': age
-    }
+def user_report():
+   name = st.sidebar.text_input('Enter the name')
+   pregnancies = st.sidebar.slider('Pregnancies', 0,17, 3 )
+   glucose = st.sidebar.slider('Glucose', 0,200, 120 )
+   bp = st.sidebar.slider('Blood Pressure', 0,122, 70 )
+   skinthickness = st.sidebar.slider('Skin Thickness', 0,100, 20 )
+   insulin = st.sidebar.slider('Insulin', 0,846, 79 )
+   bmi = st.sidebar.slider('BMI', 0,67, 20 )
+   dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0,2.4, 0.47 )
+   age = st.sidebar.slider('Age', 21,88, 33 )
 
-     if submit_button:
-        df = df.append(user_report_data, ignore_index=True)
-    
-     return df
+   if st.sidebar.button('Submit'):
+      user_report_data = {
+         'name':name,
+         'pregnancies':pregnancies,
+         'glucose':glucose,
+         'bp':bp,
+         'skinthickness':skinthickness,
+         'insulin':insulin,
+         'bmi':bmi,
+         'dpf':dpf,
+         'age':age
+      }
+      report_data = pd.DataFrame(user_report_data, index=[0])
+      return report_data
+   else:
+      return None
+
 
 
 
