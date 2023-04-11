@@ -59,7 +59,7 @@ def user_report():
       report_data = pd.DataFrame(user_report_data, index=[0])
       if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
          outresult = 'You are Type I Diabetes'
-        '
+        
         
       else:
          outresult = 'You are Type II Diabetes'
