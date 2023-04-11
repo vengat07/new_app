@@ -90,21 +90,8 @@ if outresult:
    st.subheader('Type Result')
    st.title(outresult)
 
-#st.title(output.glucose)
-#pregnancies = int(pregnancies)
-#glucose = int(glucose)
-#bp = int(bp)
-#insulin = int(insulin)
-#bmi = int(bmi)
-#age = int(age)
-
-#st.write(glucose)
-#st.subheader('Type Result')
-#output=''
-#if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
- # output = 'You are Type I Diabetes'
-#else:
-# output = 'You are Type II Diabetes'
-#st.title(output)
-
-#if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
+if outresult():
+   if outresult=='You are Type I Diabetes'
+      st.write('ssfsfsdv')
+   else:
+      st.write('wertwtttewrw")
