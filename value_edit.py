@@ -19,7 +19,6 @@ data_set= pd.read_csv('diabetes_1.csv')
 # HEADINGS
 st.title('Diabetes Checkup')
 st.sidebar.header('Patient Data')
-#name = st.sidebar.text_input('Enter the name')
 st.write(data_set.head())
 st.subheader('Training Data Stats')
 st.write(data_set.describe())
@@ -33,8 +32,6 @@ x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random
 #df= pd.read_csv('data_names.csv')
 
 # FUNCTION
-import streamlit as st
-import pandas as pd
 
 def user_report():
    name = st.sidebar.text_input('Enter the name')
@@ -64,26 +61,17 @@ def user_report():
    else:
       return None
 
-
-
-
 # PATIENT DATA
 user_data_with_name = user_report()
-#user_data_with_name = user_report()
-#user_data_with_name.insert(0,"name",name,True)
 st.subheader('Patient Data')
 st.write(user_data_with_name)
 
 user_data = user_data_with_name.drop('name',axis=1)
 
-#st.write(user_data)
-
 # MODEL
 rf  = RandomForestClassifier()
 rf.fit(x_train, y_train)
 user_result = rf.predict(user_data)
-
-
 
 
 # OUTPUT
@@ -94,6 +82,8 @@ if user_result[0]==0:
 else:
   output = 'You are Diabetic'
 st.title(output)
+
+st.write(glucose)
 
 st.subheader('Type Result')
 output=''
