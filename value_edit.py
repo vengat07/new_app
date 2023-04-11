@@ -41,10 +41,10 @@ def user_report():
    pregnancies = st.sidebar.slider('Pregnancies', 0,17,)
    glucose = st.sidebar.slider('Glucose', 0,200,)
    bp = st.sidebar.slider('Blood Pressure', 0,122, )
-   skinthickness = st.sidebar.slider('Skin Thickness', 0,100,)
-   insulin = st.sidebar.slider('Insulin', 0,846,)
+   skinthickness = 29
+   insulin = 140
    bmi = st.sidebar.slider('BMI', 0,67,)
-   dpf = st.sidebar.slider('Diabetes Pedigree Function', 0.0,2.4, )
+   dpf = 0.47
    age = st.sidebar.slider('Age', 21,88,)
 
    if st.sidebar.button('Submit'):
@@ -53,10 +53,7 @@ def user_report():
          'pregnancies':pregnancies,
          'glucose':glucose,
          'bp':bp,
-         'skinthickness':skinthickness,
-         'insulin':insulin,
          'bmi':bmi,
-         'dpf':dpf,
          'age':age
       }
       report_data = pd.DataFrame(user_report_data, index=[0])
