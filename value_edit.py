@@ -42,7 +42,7 @@ def user_report():
    glucose = st.sidebar.slider('Glucose', 0,200,)
    bp = st.sidebar.slider('Blood Pressure', 0,122, )
    skinthickness = 29
-   insulin = 140
+   insulin = st.sidebar.slider('Insulin', 0,150,  )
    bmi = st.sidebar.slider('BMI', 0,67,)
    dpf = 0.47
    age = st.sidebar.slider('Age', 21,88,)
