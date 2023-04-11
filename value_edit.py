@@ -95,6 +95,7 @@ else:
   output = 'You are Diabetic'
 st.title(output)
 
+st.write(user_data.glucose)
 st.subheader('Type Result')
 output=''
 if user_data.glucose > 125 and user_data.insulin < 125 and user_data.bmi < 25 and user_data.age > 40:
