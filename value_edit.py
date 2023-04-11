@@ -61,7 +61,7 @@ def user_report():
          outresult = 'You are Type I Diabetes'
         
         
-      else:
+      else user_result==1:
          outresult = 'You are Type II Diabetes'
       return report_data,outresult
    else:
