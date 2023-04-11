@@ -91,7 +91,7 @@ if outresult:
    st.title(outresult)
 
 if outresult():
-   if outresult=='You are Type I Diabetes'
+   if outresult==You are Type I Diabetes
       st.write('ssfsfsdv')
    else:
       st.write('wertwtttewrw")
