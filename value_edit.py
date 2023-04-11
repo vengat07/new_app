@@ -38,14 +38,14 @@ import pandas as pd
 
 def user_report():
    name = st.sidebar.text_input('Enter the name')
-   pregnancies = st.sidebar.slider('Pregnancies', 0,17,)
-   glucose = st.sidebar.slider('Glucose', 0,200,)
-   bp = st.sidebar.slider('Blood Pressure', 0,122, )
+   pregnancies = int(st.sidebar.slider('Pregnancies', 0,17,))
+   glucose = int(st.sidebar.slider('Glucose', 0,200,))
+   bp = int(st.sidebar.slider('Blood Pressure', 0,122, ))
    skinthickness = 29
-   insulin = st.sidebar.slider('Insulin', 0,150,  )
-   bmi = st.sidebar.slider('BMI', 0,67,)
+   insulin = int(st.sidebar.slider('Insulin', 0,150,  ))
+   bmi = int(st.sidebar.slider('BMI', 0,67,))
    dpf = 0.47
-   age = st.sidebar.slider('Age', 21,88,)
+   age = int(st.sidebar.slider('Age', 21,88,))
 
    if st.sidebar.button('Submit'):
       user_report_data = {
@@ -95,7 +95,6 @@ else:
   output = 'You are Diabetic'
 st.title(output)
 
-st.write(user_data.glucose)
 st.subheader('Type Result')
 output=''
 if user_data.glucose > 125 and user_data.insulin < 125 and user_data.bmi < 25 and user_data.age > 40:
