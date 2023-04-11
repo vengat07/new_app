@@ -156,11 +156,17 @@ st.subheader('Your Report: ')
 output=''
 if user_result[0]==0:
   output = 'You are not Diabetic'
+  st.title(output)
 else:
   output = 'You are Diabetic'
-st.title(output)
-if outresult:
-   st.subheader('Type Result')
-   st.title(outresult)
+  if outresult:
+     st.subheader('Type Result')
+     st.title(output)
+     st.title(outresult)
+  
+
+#if outresult:
+   #st.subheader('Type Result')
+   #st.title(outresult)
 
 
