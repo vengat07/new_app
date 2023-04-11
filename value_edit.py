@@ -97,7 +97,7 @@ st.title(output)
 
 st.subheader('Type Result')
 output=''
-if user_data.glucose > 125 and user_data.insulin < 125 and user_data.bmi < 25 and user_data.age > 40:
+if glucose > 125 and insulin < 125 and bmi < 25 and age > 40:
   output = 'You are Type I Diabetes'
 else:
   output = 'You are Type II Diabetes'
