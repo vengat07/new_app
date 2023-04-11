@@ -68,7 +68,7 @@ def user_report():
    else:
       return None
 
-st.write(user_report.name)
+st.write(user_report().name)
 # PATIENT DATA
 user_data_with_name, outresult = user_report()
 st.subheader('Patient Data')
