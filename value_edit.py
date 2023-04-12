@@ -60,7 +60,6 @@ def user_report():
       if glucose > 125 and insulin < 70 and bmi < 25 and age > 40:
          outresult = 'You are Type I Diabetes'
         
-        
       else:
          outresult = 'You are Type II Diabetes'
       return report_data,outresult
