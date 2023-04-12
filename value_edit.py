@@ -4,7 +4,6 @@ import pandas as pd
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-import plotly.figure_factory as ff
 from sklearn.metrics import accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -68,7 +67,7 @@ def user_report():
    else:
       return None,None
 
-#st.write(user_report().name)
+
 # PATIENT DATA
 user_data_with_name, outresult = user_report()
 st.subheader('Patient Data')
@@ -164,9 +163,5 @@ else:
      st.title(output)
      st.title(outresult)
   
-
-#if outresult:
-   #st.subheader('Type Result')
-   #st.title(outresult)
 
 
