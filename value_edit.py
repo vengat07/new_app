@@ -93,7 +93,7 @@ else:
 # Age vs Pregnancies
 st.header('Pregnancy count Graph (Others vs Yours)')
 fig_preg = plt.figure()
-ax1 = sns.scatterplot(x = 'Age', y = 'Pregnancies', data = df, hue = 'Outcome', palette = 'Greens')
+ax1 = sns.scatterplot(x = 'age', y = 'pregnancies', data = df, hue = 'Outcome', palette = 'Greens')
 ax2 = sns.scatterplot(x = user_data['age'], y = user_data['pregnancies'], s = 150, color = color)
 plt.xticks(np.arange(10,100,5))
 plt.yticks(np.arange(0,20,2))
